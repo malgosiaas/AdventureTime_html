@@ -2,122 +2,254 @@
 <html lang="en">
 
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Awesome website about Adventure Timee</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <style>
+        .title {
+            grid-area: header;
+        }
+
+        .left {
+            grid-area: left;
+            align-self: center;
+        }
+
+        .right {
+            grid-area: right;
+            align-self: center;
+        }
+
+        .main {
+            grid-area: main;
+            align-self: center;
+        }
+
+        .foot {
+            grid-column: span 2;
+        }
+
+        .trivia {
+            grid-column: span 3;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'left main right'
+                '. main right'
+                '. main right'
+                '. main .';
+            gap: 30px;
+            grid-row-gap: 175px;
+            padding: 50px;
+            padding-left: 254px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            text-align: center;
+
+        }
+
+        .grid-container>div {
+            padding: 20px 0;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Nice website about Adventure Time</title>
+    <link rel="stylesheet" href="src/output.css" />
 </head>
 
-<body>
-    <p >This is a blue text paragraph.</p>
-    <header>
-        <h1>Awesome website about Adventure Time</h1>
-        <h2>My subjective opinion about characters</h2>
-    </header>
-    <article><br>
-        <p>
-        <table>
-            <caption>Ranking of some traits of the main characters</caption>
-            <tr>
-                <th>Name</th>
-                <th>Strength</th>
-                <th>Stealth</th>
-                <th>Empathy</th>
-            </tr>
-            <tr>
-                <td>Finn the human</td>
-                <td>100</td>
-                <td>25</td>
-                <td>800</td>
-            </tr>
-            <tr>
-                <td>Jake the dog</td>
-                <td>500</td>
-                <td>700</td>
-                <td>75</td>
-            </tr>
+<body class="bg-blue-100 text-center flex flex-col justify-center items-center font-serif">
+
+    <div class="fixed top-0 left-0 right-0 bottom-full bg-amber-100 w-[224px] h-full items-center justify-center
+text-center border-r-8 border-white p-12">
+        <table class="table-auto text-sm fixed top-0 left-0 right-0 bottom-full ">
+            <caption class="text-xl text-fuchsia-400 bg-amber-100 p-6"><strong>Links!!!</strong></caption>
+            <tbody>
+                <tr class="border-y border-zinc-300">
+                    <td class="w-[216px] p-3"><a href="Link.html">Link 1</a></td>
+                </tr>
+                <tr class="border-y border-zinc-300">
+                    <td class="w-[216px] p-3"><a href="Link.html">Link 2</a></td>
+                </tr>
+                <tr class="border-y border-zinc-300">
+                    <td class="w-[216px] p-3"><a href="Link.html">Link 3</a></td>
+                </tr>
+                <tr class="border-y border-zinc-300">
+                    <td class="w-[216px] p-3"><a href="Link.html">Link 4</a></td>
+                </tr>
+                <tr class="border-y border-zinc-300">
+                    <td class="w-[216px] p-3"><a href="Link.html">Link 5</a></td>
+                </tr>
+            </tbody>
         </table>
-        </p>
-        <br>
-        <p>
-        <ol type="I">
-            <caption>My top 3 favourite characters</caption>
-            <li>Gunter</li>
-            <li>Lemongrab</li>
-            <li>Marceline</li>
-        </ol>
-        </p>
-        <br>
-        <p>
-            I chose Gunter for the first place because he is both <strong>cute</strong> and <strong>strong</strong>.
-            Lemongrab is second because he has a prominent <strong> character </strong><br> (<em>probably some disorders
-                that hit too close to home</em>). Marceline is third just because she is <strong>cool</strong> (third
-            place is to be thought about later).
-        </p>
-        <img src="sweet_huge_child.jpg" alt="Penguin">
-        <p>
-        <details>
-            <summary>My site my decisions</summary>
-            <p>Yes, i could make the image smaller but i don't want to. It is perfect as it is, you can better admire
-                him.</p>
-        </details>
-        </p>
-        <br>
-        <p>
+    </div>
 
-        <form>
-            <label for="cute1">How cute is he (rate from 0 to 10)</label><br>
-            <input type="text" id="cute1" name="cute1"><br>
+    <br>
+    <div class="pl-[224px] pb-16">
+        <header class="bg-amber-100 w-full max-w-7xl h-full min-h-64 items-center justify-center
+                text-center rounded-xl border-8 border-white p-12">
+            <h1 class="mb-9 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+                Nice website about Adventure Time
+            </h1>
+            <h2 class="text-4xl font-extrabold text-fuchsia-400">My subjective opinions about characters</h2>
+        </header>
+    </div>
 
-        </form>
-        </p>
-        <br>
-        <p>
-            <label for="cute2">One more chance:</label>
-            <select name="cute2" id="cute2" form="cuteform">
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-        </p>
-        <br>
-        <p>
-            LAST CHANCE <br>
-            <button type="submit" form="cute3" value="10">10</button>
-        </p>
-        <br>
-        <label for="sth">Wait for the results of your test:</label>
-        <br>
-        <progress id="sth" value="90" max="100"> 90% </progress>
-        <br></br>
-        <p class="text-blue-600">
-        <h3>Time for a trivia! Do you know the names of these characters? <br> You can check your answers by clicking on
-            the heads of these characters! </h3>
-        </p>
-        <p>
-            <img src="trivia.png" usemap="#image-map">
 
-            <map name="image-map">
-                <area target="" alt="Huntress_wizard" title="Huntress_wizard" href="Huntress_wizard.html"
-                    coords="548,88,41" shape="circle">
-                <area target="" alt="Magic_man" title="Magic_man" href="Magic_man.html"
-                    coords="386,21,356,119,419,126,423,21,410,2" shape="poly">
-                <area target="" alt="Lemongrab" title="Lemongrab" href="Lemongrab.html"
-                    coords="189,60,229,7,253,28,266,94,243,121,201,117" shape="poly">
-                <area target="" alt="Peppermin_butler" title="Peppermin_butler" href="peppermint_butler.html"
-                    coords="97,149,84" shape="circle">
-            </map>
+    <article>
+        <div class="grid-container">
+            <div class="left-0">
+                <div class="bg-fuchsia-200 min-h-56 rounded-xl shadow-2xl flex flex-col justify-center items-center">
+                    <table class="table-auto text-sm border-2 border-slate-300">
+                        <caption class="text-base text-blue-400"><strong>Ranking some of the traits of the main
+                                characters</strong></caption>
+                        <thead class="text-xs text-gray-700 bg-gray-100">
+                            <tr>
+                                <th scope="col" class="px-4 py-3">Name</th>
+                                <th scope="col" class="px-4 py-3">Strength</th>
+                                <th scope="col" class="px-4 py-3">Stealth</th>
+                                <th scope="col" class="px-4 py-3">Sensitivity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <td class="p-4">Finn</td>
+                                <td class="p-4">100</td>
+                                <td class="p-4">25</td>
+                                <td class="p-4">800</td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <td class="p-4">Jake</td>
+                                <td class="p-4">500</td>
+                                <td class="p-4">700</td>
+                                <td class="p-4">200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        </p>
+
+            <div class="main-0 flex flex-col justify-center items-center">
+                <ul
+                    class="flex flex-col justify-center items-center list-[upper-roman] list-inside w-full shadow-2xl min-h-56 bg-fuchsia-200 rounded-xl text-2xl">
+                    <div class=" bg-white rounded-xl min-h-48 max-w-72 pt-3">
+                        <caption>
+                            <p class="text-blue-300 "> <strong>
+                                    My top 3 favourite characters</strong></p>
+                        </caption>
+                        <li>Gunter</li>
+                        <li>Lemongrab</li>
+                        <li>Marceline</li>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div class="right-0">
+                <div
+                    class="bg-fuchsia-200 min-h-56 rounded-xl shadow-2xl flex flex-col justify-center items-center p-7 ">
+                    <p class="text-center text-base">
+                        I chose Gunter for the first place because he is both <strong>cute</strong> and
+                        <strong>strong</strong>.
+                        Lemongrab is second because he has a prominent <strong> character </strong><br> (<em>probably
+                            some
+                            disorders</em>). Marceline is third just because she is <strong>cool</strong> (im unsure
+                        about this one).
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="foot">
+                <img src="sweet_huge_child.jpg" alt="Penguin" style="width:800px;height:916px;">
+                <details class="text-xl">
+                    <summary>Hi</summary>Bla bla bla.
+                </details>
+            </div>
+
+            <div class="right-1 flex flex-col justify-center items-center">
+                <div class="bg-red-100 w-full rounded-xl text-centered p-6 min-h-fit">
+                    <div class="w-full max-w-xs">
+                        <form>
+                            <label for="cute1" class="text-xl">How pretty is he?<br> (rate from 0 to 10)</label>
+                            <input
+                                class="shadow appearance-none border text-xl rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" id="cute1" name="cute1">
+                        </form>
+                    </div>
+                    <div class="pt-9 pb-10">
+                        <label for="cute2" class="text-xl">One more chance:</label>
+                        <select name="cute2" id="cute2" form="cuteform" class="text-2xl">
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="bg-red-50 w-full rounded-xl shadow-2xl text-centered p-6 min-h-fit">
+                        <p class="text-3xl pt-7 underline">LAST CHANCE</p>
+                        <p class="pt-8 pb-7">
+                            <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded" ,
+                                type="submit" form="cute3" value="10"><a href="Correct.html">10</a></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="trivia flex flex-col justify-center items-center">
+                <div class="bg-amber-100 max-w-[800px] min-h-[500px] rounded-xl shadow-2xl text-centered p-8">
+                    <h3><strong>
+                            <p class="text-fuchsia-400 text-2xl pb-3">Time for a trivia!</p>
+                        </strong>
+                        <p class="pb-4">
+                            Do you know the names of these characters? You can check your answers by
+                            clicking on
+                            their heads! </p>
+                    </h3>
+                    <p class="flex flex-col justify-center items-center">
+                        <img src="trivia.png" usemap="#image-map" class="border-solid border-8 border-white rounded-xl">
+                        <map name="image-map">
+                            <area target="" alt="Huntress_wizard" title="Huntress_wizard" href="Huntress_wizard.html"
+                                coords="548,88,41" shape="circle">
+                            <area target="" alt="Magic_man" title="Magic_man" href="Magic_man.html"
+                                coords="386,21,356,119,419,126,423,21,410,2" shape="poly">
+                            <area target="" alt="Lemongrab" title="Lemongrab" href="Lemongrab.html"
+                                coords="189,60,229,7,253,28,266,94,243,121,201,117" shape="poly">
+                            <area target="" alt="Peppermin_butler" title="Peppermin_butler"
+                                href="peppermint_butler.html" coords="97,149,84" shape="circle">
+                        </map>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="trivia flex flex-col justify-center items-center">
+                <p class="text-blue-500 pb-7 text-xl">
+                    <label for="sth">Wait for somethig cool!</label>
+                </p>
+                <div class="w-full bg-white rounded-full max-w-4xl min-h-7">
+                    <div class="animate-pulse bg-blue-300 text-md min-h-7 font-medium text-white text-center p-0.5 leading-none rounded-full"
+                        style="width: 95%"> 95%</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
     </article>
-    <footer>
-        <p>Author: Małgosia Szeler</p>
-        <img src="gunter_dribbble.gif" alt="Penguin_gif">
-    </footer>
-</body>
+    <div class="pl-[224px]  w-full pt-40">
+        <footer class="bg-white w-full flex flex-col justify-center items-center">
+            <br>
+            <p>Author: Małgosia Szeler</p>
 
+            <img src="gunter_dribbble.gif" alt="Penguin_gif">
+
+        </footer>
+    </div>
+</body>
 </html>
